@@ -16,13 +16,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         binding.btnSnackbar.setOnClickListener {
-
+            Snackbar.make(binding.root, "SnackBar Showed!", Snackbar.LENGTH_LONG)
+                .show()
         }
 
         binding.btnToast.setOnClickListener {
-
+            Toast.makeText(this, "Toast Showed!", Toast.LENGTH_SHORT)
+                .show()
         }
     }
 }
